@@ -20,3 +20,15 @@ void times_table(void)
 		printf("\n");
 	}
 }
+
+/**
+ * main - entry point of the program
+ *
+ * Return: Always 0
+ */
+int main(void)
+{
+	times_table();
+	return (0);
+}
+
