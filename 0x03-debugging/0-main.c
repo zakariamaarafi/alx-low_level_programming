@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -16,6 +17,11 @@ void positive_or_negative(int n)
 		printf("0 is zero\n");
 }
 
+/**
+ * main - Test function for positive or negative
+ *
+ * Return: 0
+ */
 int main(void)
 {
 	int i;
