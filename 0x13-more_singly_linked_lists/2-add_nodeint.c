@@ -2,7 +2,7 @@
 #include "lists.h"
 
 /**
- * add_nodeint - adds a node to the beginning of 
+ * add_nodeint - adds a node to the beginning of
  * a linked list
  *
  * @head: point to the first node of the list
