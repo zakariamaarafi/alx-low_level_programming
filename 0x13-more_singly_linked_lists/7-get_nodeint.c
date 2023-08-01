@@ -4,8 +4,8 @@
 /**
  * get_nodeint_at_index - it returns the node to certain index in the
  * linked list
- * @head: first node in the linked list
- * @index: index of the node to return
+ * @head: 1st node in the linked list
+ * @index: the index of the node to return
  *
  * Return: point to the node we're looking for or NULL
  */
