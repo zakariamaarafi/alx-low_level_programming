@@ -11,8 +11,8 @@
  */
 typedef struct listint_s
 {
-int x;
-struct listint_s *next_node;
+int n;
+struct listint_s *next;
 } listint_t;
 
 /*functions prototypes*/
