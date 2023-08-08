@@ -9,7 +9,7 @@
 
 char *create_buff(char *file)
 {
-	char buff;
+	char *buff;
 
 	buff = malloc(sizeof(char) * 1024);
 
@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
 	do {
 		if (from == -1 || r == -1)
 		{
-			printf(STDERR_FILENO,
+			dprintf(STDERR_FILENO,
 					"Error: can't read from file %s\n", argv[1]);
 			free(buff);
 			exit(98);
@@ -85,7 +85,7 @@ int main(int argc, char *argv[])
 		}
 
 		r = read(from, buff, 1024);
-		to =open(argv[2], O_WRONLY | O_APPEND);
+		to = open(argv[2], O_WRONLY | O_APPEND);
 
 		} while (r > 0);
 
