@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char *create_buffer(char *file);
+char *create_buff(char *file);
 void close_file(int fd);
 
 /**
@@ -12,7 +12,7 @@ void close_file(int fd);
  * Return: pointer to the new allocated buffer.
  */
 
-char *create_buffer(char *file)
+char *create_buff(char *file)
 {
 	char *buff;
 
@@ -20,8 +20,7 @@ char *create_buffer(char *file)
 
 	if (buff == NULL)
 	{
-		dprintf(STDERR_FILENO,
-				"Error: can't write to %s\n", file);
+		dprintf(STDERR_FILENO,"Error: can't write to %s\n", file);
 		exit(99);
 	}
 
@@ -74,17 +73,15 @@ int main(int argc, char *argv[])
 	do {
 		if (from == -1 || r == -1)
 		{
-			dprintf(STDERR_FILENO,
-					"Error: can't read from file %s\n", argv[1]);
+			dprintf(STDERR_FILENO,"Error: can't read from file %s\n", argv[1]);
 			free(buff);
 			exit(98);
 		}
 
-		w = wriyte(to, buff, r);
+		w = write(to, buff, r);
 		if (to == -1 || w == -1)
 		}
-		dprintf(STDERR_FILENO,
-			"Error: can't write to %s\n", argv[2]);
+		dprintf(STDERR_FILENO,"Error: can't write to %s\n", argv[2]);
 		free(buff);
 		exit(99);
 		}
